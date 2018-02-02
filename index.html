@@ -11,11 +11,10 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <script type="text/javascript">
     /* Redirect people to https*/
-    /*
-		if (location.protocol != 'https:'){
+    var doRedirect = true;
+		if (location.protocol != 'https:' && doRedirect){
      location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 	 	}
-		*/
     </script>
 	</head>
 	<body>
