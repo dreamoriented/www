@@ -27,6 +27,27 @@
 		position: relative;
 	}
 
+	.logo {
+		width: 75px;
+		position: absolute;
+		top: 2em;
+		left: 2em;
+	}
+
+	.headerMenu {
+		width: calc(100% - 120px);
+		position: absolute;
+		top: 2em;
+		right: 2em;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.headerMenu li {
+		list-style: none;
+		padding: 0px 1em;
+	}
+
 	ol, ul {
 		list-style: none;
 	}
@@ -747,6 +768,7 @@
 
 	@media screen and (max-width: 980px) {
 
+
 		.row > * {
 			padding: 0 0 0 1.5em;
 		}
@@ -1400,7 +1422,39 @@
 		-ms-overflow-style: scrollbar;
 	}
 
+	.headerMenuButton {
+		display: none;
+	}
+
 	@media screen and (max-width: 480px) {
+
+		.headerMenu {
+			display: none;
+		}
+
+		.headerMenuButton {
+			display: block;
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 100%;
+			top: 2em;
+			right: 2em;
+			display: flex;
+			background: rgba(255,255,255,0.1);
+			transition: 200ms all;
+			cursor: pointer;
+		}
+
+		.headerMenuButton img{
+			width: 70%;
+			height: 70%;
+			margin: auto;
+		}
+
+		.headerMenuButton:hover {
+			background: rgba(255,255,255,0.3);
+		}
 
 		html, body {
 			min-width: 320px;
